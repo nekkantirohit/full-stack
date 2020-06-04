@@ -1,0 +1,40 @@
+ul {
+    margin:0px ;
+    border:3px solid black;
+    width: 600px;;
+    list-style-type:none;
+    background-color:lightskyblue;
+}
+ul a{
+    display:inline-block;
+    padding:8px;
+}
+ul a:hover{
+    background-color: lightseagreen;
+}
+th{
+    font-size: x-large;
+}
+table{
+    border:3px solid green;
+    background-color: gray;
+}
+img{
+    border:3px solid red;
+    margin:5px;
+}
+.iconDetails {
+    margin-left:2%;
+   float:left; 
+   height:200px;
+   width:200px; 
+   } 
+   
+   .container2 {
+       width:100%;
+       height:auto;
+       padding:1%;
+   }
+   textarea{
+       color: green;
+   }
