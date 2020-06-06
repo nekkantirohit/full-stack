@@ -17,7 +17,7 @@
   .u2 {
     list-style-type: none;
     border: 2px solid black;
-    background-color: #dc3545;
+    background-color: lightsalmon;
     margin: 0px;
     text-align: center;
     font-size: 30px;
@@ -44,7 +44,7 @@
     font-family: Georgia, "Times New Roman", Times, serif;
   }
   .u2 a:active {
-    color: orange;
+    color: yellow;
     font-size: 30px;
     font-family: Georgia, "Times New Roman", Times, serif;
   }
@@ -70,4 +70,4 @@
     background-size: cover;
     background-size: 30%;
   }
-  © 2020 GitHub, Inc.
+  
