@@ -1,78 +1,76 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Registration Form</title>
-    </head>
-    <body>
-        <form method="POST" target="#" onsubmit="return validate()">
-            <table>
-                <tr>
-                    <th colspan="2">registration form</th>
-                </tr>
-                <tr>
-                    <td>Name</td>
-                    <td><input type=text name=textnames id="textname" ></td>
-                    </tr>
-                    <tr>
-                        <td>rollno</td>
-                        <td><input type=text name=textrollno id="rollno" ></td>
-                        </tr>
-                        <tr>
-                            <td>emailid</td>
-                            <td><input type=email name=emailId id="emailid" ></td>
-                            </tr>
-                            <tr>
-                                <td>Personal Address</td>
-                                <td><input type="text" name="personaladdress"
-                                id="personaladdress" ></td>
-                                </tr>
-                                <tr>
-                                    
-                                        <td>deptartment</td>
-                                        <td><select name="deptartment">
-                                        <option value="-1" selected>select..</option>
-                                        <option value="CSE">CSE</option>
-                                        <option value="MECH">MECH</option>
-                                        <option value="EEE">EEE</option>
-                                        <option value="EC">EC</option>
-                                        <option value="AERO">AERO</option>
-                                        <option value="CIVIL">CIVIL</option>
-                                        </select></td>
-                                        </tr>
-                                        <tr>
-                                            <td>passing year</td>
-                                            <td><select year="passing year">
-                                                <option value="-1" selected>select..</option>
-                                                <option value="2020">2020</option>
-                                                <option value="2021">2021</option>
-                                                <option value="2022">2022</option>
-                                                <option value="2023">2023</option>
-                                                <option value="2024">2024</option>
-                                            </td>
-                                        </tr>
-                                        <td>joining year</td>
-                                            <td> <select year="joining year">
-                                                <option value="-1" selected>select..</option>
-                                                <option value="2016">2016</option>
-                                                <option value="2017">2017</option>
-                                                <option value="2018">2018</option>
-                                                <option value="2019">2019</option>
-                                                <option value="2020">2020</option>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>DOB</td>
-                                            <td><input type="text" name="dob" id="dob" ></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mobileno</td>
-                                                <td><input type="text" name="Mobileno" id="mobileno" ></td>
-                                                </tr>
-                                                <tr>
-                                                    
-                                                    <td><input type="submit" onclick="validate()">validate</td>
-                                                </tr>
-            </table>
-        </form>
-    </body>
-</html>
+<head>
+  <title>
+    Registration
+  </title>
+  <link rel="shortcut icon" href="gitam.jpg" />
+  <link href="p3.css" rel="StyleSheet" />
+  <script src="p1.js"></script>
+</head>
+<body>
+  <div class="i1">
+    <img src="gitam.jpg" width="122px" height="128px" />
+  </div>
+  <div class="i2">
+    <img src="naac-logo.png" width="122px" height="120px" />
+  </div>
+  <div class="a1">
+    <ul class="u1" type="none">
+      <li>GITAM University</li>
+      <li>TandP Cell</li>
+    </ul>
+  </div>
+  <ul class="u2">
+    <a href="pro1.html" target="_blank"><li>Home</li></a>
+    <a href="pro3.html" target="_blank"><li>about us</li></a>
+    <a href="pro4.html" target="_blank"><li>contact us</li></a>
+    <a href="pro5.html" target="_blank"><li>login</li></a>
+    <a href="pro6.html" target="_blank"><li>Feedback</li></a>
+    <a href="pro2.html" target="_blank"><li>Registration</li></a>
+  </ul>
+  <h1>Registration page</h1>
+  <form method="post" target="#" onsubmit="return validate()" id="f1">
+    <p>
+      Register for Gitam account so that you can access the features of tandp
+      page
+    </p>
+    Name<br />
+    <input type="text" name="name" id="us" /><br />
+    Id<br />
+    <input type="number" id="idd" /><br />
+    Date Of Birth<br />
+    <input type="text" id="dt" /><br />
+    <h6>write in a format of DD/MM/YYYY</h6>
+    Year Of Joining<br />
+    <input type="number" id="jd" /><br />
+    Year of Passing out<br />
+    <input type="number" id="pd" /><br />
+    Branch<br />
+    <select>
+      <option>CSE</option>
+      <option>ECE</option>
+      <option>MECH</option>
+      <option>EEE</option>
+      <option>CIVIL</option> </select
+    ><br />
+    Mobile Number:<br />
+    <input type="number" id="ph" /><br />
+    Email<br />
+    <input type="text" name="email" id="em" /><br />
+    Retype email<br />
+    <input type="text" name="retype_email" id="rem" /><br />
+    Create a password<br />
+    <input type="password" name="password" id="ps" /><br />
+    Retype password<br />
+    <input type="password" name="retype_password" id="rps" /><br />
+    <label>
+      <input type="checkbox" name="terms" id="cb" />By clicking on to this you
+      agree to our <a href="#service">Terms of Service</a> and
+      <a href="#policy">Privacy Policy</a>
+    </label>
+    <div class="button">
+      <input type="submit" class="button" value="Set Up Account" />
+      <input type="button" onclick="myFunction()" value="clear" />
+    </div>
+  </form>
+</body>
