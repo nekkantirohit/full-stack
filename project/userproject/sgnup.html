@@ -1,0 +1,117 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="sgnup.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    <style>
+    #msg {
+    visibility: hidden;
+    min-width: 250px;
+    background-color:yellow;
+    color: #000;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 30%;
+    top: 30px;
+    font-size: 17px;
+	margin-right:30px;
+}
+
+#msg.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeou
+t {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+    </style>
+</head>
+
+<body>
+<div class="signup">
+    <form>
+    <h2 style="color: #fff;">Sign Up</h2>
+    <input type="text" name="KN number" placeholder="KN number"><br><br>
+    <select name="gold type" id="gold">
+        <option value="8 carat">8 carat</option>
+        <option value="16 carat">16 carat</option>
+        <option value="24 carat">24 carat</option>
+      </select>
+    <input type="text" name="place bought from" placeholder="place brought from"><br><br>
+    <input type="text" name="username" id="username" placeholder="Last name"><br><br>
+    <input type="text" name="jewelers name" placeholder="jewelers name"><br><br>    
+    <input type="text" name="account holder name" placeholder="account holder name"><br><br>
+    <select name="accountoint" type" id="account">
+        <option value="joint">joint account</option>
+        <option value="savings/curent">saving/current account</option>   
+    <input type="text" name="account no" placeholder="Account Number"><br><br>  
+    <input type="text" name="IFSC Code" placeholder="IFSC code"><br><br>  
+    <input type="text" name="Bank name" placeholder="Bank name"><br><br>  
+    <input type="text" name="branch name" placeholder="branch name"><br><br>  
+    <input type="button" value="Sign up" id="btnsignup" onclick="myFunction()"><br><br>
+        <div id="msg">Congratulations You Sign Up successfully!!</div>
+        <script>
+function myFunction() {
+    var x = document.getElementById("msg");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+$("#btnsignup").click(function(){
+        
+        debugger;
+        var a = 0;
+        var data = {};
+        data.username = $('#username1').val();
+        //data.email = $("#email1").val();
+        //data.password = $("#password1").val();
+        //validation here
+        $.ajax({
+          type: "POST",
+          url: "http://localhost:3306/register/",
+          data: JSON.stringify(data),
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          success: function (data1) {
+          if(data1.code  == 400){
+            swal("oops!", "Invalid Credentials!", "error");
+            //swal("wow!", "Data is inserted!", "success");
+            return false;
+          }
+          swal("wow!", "Data is inserted!", "success");                           
+          },
+          error:function(jqxhr){
+            swal("oops!", "Invalid Credentials!", "error");
+          }
+        });
+      });
+    });
+</script>
+        Already have account?<a href="logn.html" style="text-decoration: none; font-family: 'Play', sans-serif; color: yellow;">&nbsp;Log In</a>
+    </form>
+    
+    </div>
+</body>
+</html>
